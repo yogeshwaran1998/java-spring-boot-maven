@@ -12,8 +12,8 @@
         name: docker
         state: present
     - name: start docker
-      ansible.builtin.systemd:
-        service: docker
+      service:
+        name: docker
         state: started
         enabled: yes
     - name: Install docker-py python module
